@@ -107,7 +107,11 @@
 .card-deck .card {
   max-width: 190px;
   min-width: 190px;
+  min-height: 500px;
+  max-height: 500px;
+
 }
+
 
 .card-block{
   padding-top: 15px;

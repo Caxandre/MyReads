@@ -35,6 +35,9 @@ export default props => {
                         </select>
                     </div>
                 </div>
+                <div className="card-footer">
+                    <small className="text-muted" style={{ textTransform: 'uppercase'}}>{book.categories || 'Uninformed'}</small>
+                </div>
             </div>
 
         )
@@ -42,7 +45,7 @@ export default props => {
     }
 
     return (
-        <div class="books">
+        <div className="books">
             {renderBook()}
         </div>
     )
