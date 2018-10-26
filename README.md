@@ -1,9 +1,9 @@
 # MyReads Project
 
 MyReads is a bookshelf app created during the Udacity's React Nanodegree Course. Allows the user to search and manage books in three categories:
-	Read;
-	Currently reading;
-	Want to read. 
+* Read;
+* Currently reading;
+* Want to read. 
 
 ## Installation
 
