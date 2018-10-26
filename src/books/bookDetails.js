@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import * as BooksAPI from '../utils/BooksAPI'
 import BookInfo from './components/bookInfo'
-import { Link } from 'react-router-dom'
-import SearchButton from '../template/searchButton'
+import SearchButton from '../template/layout/searchButton'
 
 export default class BookDetails extends Component {
 

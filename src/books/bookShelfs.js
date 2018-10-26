@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import * as BooksAPI from '../utils/BooksAPI'
-import BookList from './components/bookList'
-import SearchButton from '../template/searchButton'
-import Loading from '../template/loading';
+import Shelfs from './components/shelfs'
+import Loading from '../template/utils/loading';
+import SearchButton from '../template/layout/searchButton'
 
 export default class Book extends Component {
     constructor(props) {
@@ -54,7 +54,7 @@ export default class Book extends Component {
                     </ol>
                 </nav>
                 <div className="container">
-                    <BookList
+                    <Shelfs
                         shelfs={this.state.shelfs}
                         books={this.state.books}
                         onChangeShelf={this.handleMoveToShelf}/>

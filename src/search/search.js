@@ -2,10 +2,10 @@ import React, { Component } from 'react'
 import { debounce } from 'lodash';
 import * as BooksAPI from '../utils/BooksAPI'
 import SearchForm from './components/searchForm'
-import SearchResults from './components/searchResults'
+import Book from '../books/components/book'
+import Loading from '../template/utils/loading';
+import ReturnButton from '../template/layout/returnButton'
 import NoResults from './components/noResults';
-import Loading from '../template/loading';
-import ReturnButton from '../template/returnButton'
 
 export default class Search extends Component {
     constructor(props) {
@@ -23,6 +23,7 @@ export default class Search extends Component {
 
     handleSearch = () => {
         BooksAPI.getAll().then(books => {
+            console.log('[0001] -> ' + JSON.stringify(books))
             this.setState({ onTheShelf: books }, () => {
                 BooksAPI.search(this.state.query).then(data => {
                     if (data) {
@@ -99,10 +100,17 @@ export default class Search extends Component {
                         query={this.state.query}
                         updateQuery={this.updateQuery}
                     />
-                    <SearchResults
-                        books={this.state.books}
-                        onChangeShelf={this.handleMoveToShelf}
-                    />
+                    <section className="book-shelfs">
+                        <div className="card-deck mb-3">
+                            {this.state.books.map(book => (
+                                <Book
+                                    book={book}
+                                    key={book.id}
+                                    onChangeShelf={this.handleMoveToShelf}
+                                />
+                            ))}
+                        </div>
+                    </section>
                     {this.state.error && <NoResults />}
                 </div>
             </div>

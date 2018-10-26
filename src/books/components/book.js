@@ -2,15 +2,16 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 export default props => {
-    const renderRows = () => {
-        const books = props.books || []
+
+    const renderBook = () => {
+        const book = props.book
         const imageFail = "http://andrewcmaxwell.com/wp-content/themes/acm_2014/images/book_not_found.png"
         const getNestedObject = (nestedObj, pathArr) => {
             return pathArr.reduce((obj, key) =>
                 (obj && obj[key] !== 'undefined') ? obj[key] : imageFail, nestedObj);
         }
 
-        return books.map(book => (
+        return (
             <div key={book.id} className="card mb-3 shadow-sm">
                 <Link to={`/books/${book.id}`}>
                     <img className="rounded book-cover" src={getNestedObject(book, ['imageLinks', 'thumbnail'])} alt="Card image cap" />
@@ -35,16 +36,14 @@ export default props => {
                     </div>
                 </div>
             </div>
-        ))
+
+        )
+
     }
 
     return (
-        <section className='book-shelfs'>
-            <div className="card-deck mb-3">
-                {renderRows()}
-            </div>
-        </section>
+        <div class="books">
+            {renderBook()}
+        </div>
     )
 }
-
-
