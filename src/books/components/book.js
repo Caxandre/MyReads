@@ -19,11 +19,7 @@ export default props => {
                 <div className="card-body">
                     <h6 className="card-title">{book.title}</h6>
                     <div className="book-authors">
-                        {book.authors !== undefined && (
-                            book.authors.map((author, i) => (
-                                <li key={i}>{author}</li>
-                            ))
-                        )}
+                        {book.authors && <p>{book.authors.join(', ')}</p>}
                     </div>
                     <div className="book-shelf-changer">
                         <select value={book.shelf} onChange={(e) => props.onChangeShelf(e, book)}>
@@ -36,7 +32,7 @@ export default props => {
                     </div>
                 </div>
                 <div className="card-footer">
-                    <small className="text-muted" style={{ textTransform: 'uppercase'}}>{book.categories || 'Uninformed'}</small>
+                    <small className="text-muted" style={{ textTransform: 'uppercase' }}><b>{book.categories || 'Uninformed'}</b></small>
                 </div>
             </div>
 

@@ -23,7 +23,6 @@ export default class Search extends Component {
 
     handleSearch = () => {
         BooksAPI.getAll().then(books => {
-            console.log('[0001] -> ' + JSON.stringify(books))
             this.setState({ onTheShelf: books }, () => {
                 BooksAPI.search(this.state.query).then(data => {
                     if (data) {

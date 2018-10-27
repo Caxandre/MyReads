@@ -17,10 +17,20 @@ export default props => {
                     </div>
                     <div className="col-md-8 px-3">
                         <div className="card-block px-3">
-                            <h4>{book.title}</h4>
+                            <h1 className="h3">{book.title}</h1>
                             <br></br>
-                            <p>{book.description}</p>
-                            <p>Publisher: {book.publisher}</p>
+                            <dl className="row">
+                                <dt className="col-sm-3">Description</dt>
+                                <dd className="col-sm-9 text-justify">{book.description || 'Uninformed'}</dd>
+                                <dt className="col-sm-3">Publisher</dt>
+                                <dd className="col-sm-9">{book.publisher || 'Uninformed'}</dd>
+                                <dt className="col-sm-3">Publish Date</dt>
+                                <dd className="col-sm-9">{book.publishedDate ? new Date(book.publishedDate + ' ').toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : 'Unknown'}</dd>
+                                <dt className="col-sm-3">Pages</dt>
+                                <dd className="col-sm-9">{book.pageCount || 'Uninformed'}</dd>
+                                <dt className="col-sm-3">Categorie(s):</dt>
+                                <dd className="col-sm-9">{book.categories ? book.categories.join(', ') : 'Uninformed'}</dd>
+                            </dl>
                         </div>
                     </div>
                 </div>
