@@ -7,8 +7,7 @@ MyReads is a bookshelf app created during the Udacity's React Nanodegree Course.
 
 ## Installation
 
-<<<<<<< HEAD
-The following steps will help install and run My Reads App on your local computer.
+The following steps will help install and run MyReads on your local computer.
 
 git clone: https://github.com/Caxandre/MyReads.git
 cd myreads
@@ -17,28 +16,9 @@ cd myreads
 
 * Start the development server with `npm start` or `yarn start`.
 
-
 ## Backend Server
 
 To simplify the development process was used backend server provided by Udacity, called BooksAPI.js.
-||||||| merged common ancestors
-To get started developing right away:
-=======
-The following steps will help install and run My Reads App on your local computer.
-
-git clone: https://github.com/Caxandre/MyReads.git
-cd myreads
-
-* install all project dependencies with `npm install` or `yarn install`
-
-* Start the development server with `npm start` or `yarn start`.
-
-
-## Backend Server
-
-To simplify the development process was used backend server provided by Udacity, called BooksAPI.js.
->>>>>>> ed7cea16c5d5fa1fa30770d1f51a24fe86d964d9
-
 
 ## Create React App
 
@@ -46,8 +26,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Dependencies
 
-[Bootstrap](https://getbootstrap.com/)
-[Debounce](https://github.com/component/debounce)
-[React-loading](https://github.com/fakiolinho/react-loading)
+* [Bootstrap](https://getbootstrap.com/)
+* [Debounce](https://github.com/component/debounce)
+* [React-loading](https://github.com/fakiolinho/react-loading)
 
 

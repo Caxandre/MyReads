@@ -14,7 +14,7 @@ export default props => {
         return (
             <div key={book.id} className="card mb-3 shadow-sm">
                 <Link to={`/books/${book.id}`}>
-                    <img className="rounded book-cover" src={getNestedObject(book, ['imageLinks', 'thumbnail'])} alt="Card image cap" />
+                    <img className="rounded book-cover" src={getNestedObject(book, ['imageLinks', 'thumbnail'])} alt=" " />
                 </Link>
                 <div className="card-body">
                     <h6 className="card-title">{book.title}</h6>

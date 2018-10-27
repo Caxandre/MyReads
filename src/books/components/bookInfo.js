@@ -13,7 +13,7 @@ export default props => {
             <div className="card book-info">
                 <div className="row ">
                     <div className="col-md-4">
-                        <img src={thumbnail} className="rounded float-left cover" />
+                        <img src={thumbnail} className="rounded float-left cover" alt=" " />
                     </div>
                     <div className="col-md-8 px-3">
                         <div className="card-block px-3">

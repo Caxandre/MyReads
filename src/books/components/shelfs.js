@@ -5,7 +5,6 @@ import Book from './book'
 export default props => {
     const books = props.books
     const renderShelf = () => {
-        {console.log(JSON.stringify(books))}
         return props.shelfs.map(shelf => (
             <section key={shelf}>
                 <ShelfHeader shelf={shelf} />
